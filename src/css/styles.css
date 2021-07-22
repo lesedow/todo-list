@@ -1,0 +1,223 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+/* Variables */
+:root {
+	--default-font-size: 10px;
+	--nunito: 'Poppins', sans-serif;
+	--default-weight: 200;
+	--sm-screen: 576px;
+	--md-screen: 768px;
+	--lg-screen: 992px;
+	--primary-color: #00a7e1;
+	--project-hover-color: #e4e4e4;
+	--toggler-color: #02bdfc;
+	--transition: 0.2s;
+}
+
+/* Globals */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: var(--default-font-size);
+	font-weight: var(--default-weight);
+	font-family: var(--nunito);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+i {
+	font-size: 1rem;
+}
+
+p {
+	font-size: 1rem;
+}
+
+/* Header */
+header {
+	min-height: 60px;
+	display: flex;
+	justify-content: space-between;
+	background-color:  var(--primary-color);
+	padding: 0 1rem;
+}
+
+header .logo__container {
+	display: flex;
+	align-items: center;
+}
+
+.logo__container .logo{
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: white;
+	font-weight: 400;
+}
+
+/* Nav Bar */
+.nav__bar {
+	display: flex;
+	align-items: center;
+}
+
+.nav__bar .menu__toggler {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 0.3rem;
+	transition: var(--transition);
+	padding: 0.2rem 0.5rem;
+}
+
+.nav__bar .menu__toggler:hover {
+	background-color: var(--toggler-color);
+}
+
+.nav__bar .menu__toggler i {
+	color: white;
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+/* Side Bar */
+.side__bar {
+	position: absolute;
+	left: 0;
+	width: 400px;
+	background-color: #f3eff5;
+	height: calc(100% - 60px);
+	padding-top: 4rem;
+	transition: transform .3s;
+	overflow-y: auto;
+}
+
+.projects__container {
+	height: 100%;
+	padding-left: 1rem;
+}
+
+/* Projects */
+.projects__dropdown {
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	justify-content: space-between;
+}
+
+.projects__dropdown .projects__title {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.projects__dropdown .add__project {
+	display: flex;
+	align-items: center;
+	cursor: pointer; 
+	padding: 0.2rem 0.5rem;
+	border-radius: 0.3rem;
+	transition: var(--transition);
+	margin-right: 1rem;
+}
+
+.projects__dropdown .add__project:hover, .project .delete:hover {
+	background-color: var(--project-hover-color);
+}
+
+/* Projects Dropdown */
+.projects {
+	font-weight: 200;
+}
+
+.project {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.project .delete {
+	display: flex;
+	align-items: center;
+	cursor: pointer; 
+	padding: 0.2rem 0.5rem;
+	border-radius: 0.3rem;
+	transition: var(--transition);
+	margin-right: 1rem;
+}
+
+.project__select {
+	padding: 0.1rem 0 0.1rem 1rem;
+	margin: 0.5rem 1rem 0.5rem 1rem;
+	border-radius: 0.3rem;
+	transition: var(--transition);
+	cursor: pointer;
+	width: 100%;
+}
+
+.project .project__select:hover {
+	background-color: var(--project-hover-color);
+}
+
+/* New Project Input */
+.new__project {
+	display: flex;
+}
+
+.new__project .project__name {
+	padding: 0 0.5rem;
+	margin-left: 1rem;
+	width: 50%;
+}
+
+.new__project .add, .new__project .cancel {
+	display: block;
+	font-family: inherit;
+	font-weight: 300;
+}
+	
+.new__project .add {
+	padding: 0.2rem 1.5rem;
+}
+
+.new__project .cancel {
+	padding: 0.2rem 1.2rem;
+}
+
+/* Main Content */
+.main {
+	width: calc(100% - 400px);
+	margin-left: auto;
+	padding: 4rem;
+}
+
+.main p {
+	font-size: 1.5rem;
+}
+
+/* Toggle Side Bar */
+.hide {
+	transform: translateX(-100%);
+}
+
+/* Project Active Class */
+.active {
+	background-color: var(--project-hover-color);
+}
+
+
+@media (min-width: 992px) {
+	header {
+		padding: 0 3rem;
+	}
+}
